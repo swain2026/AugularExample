@@ -17,16 +17,20 @@ export const routes: Routes = [
         loadComponent: () => import('./features/dashboard/dashboard.component').then(m => m.DashboardComponent)
       },
       {
-        path: 'users',
+        path: 'auth/users',
         loadComponent: () => import('./features/users/user-list/user-list.component').then(m => m.UserListComponent)
       },
       {
-        path: 'roles',
+        path: 'auth/roles',
         loadComponent: () => import('./features/roles/role-list/role-list.component').then(m => m.RoleListComponent)
       },
       {
-        path: 'permissions',
+        path: 'auth/permissions',
         loadComponent: () => import('./features/permissions/permission-list/permission-list.component').then(m => m.PermissionListComponent)
+      },
+      {
+        path: 'auth/logs',
+        loadComponent: () => import('./features/logs/log-list.component').then(m => m.LogListComponent)
       }
     ]
   },

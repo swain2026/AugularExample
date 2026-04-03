@@ -49,7 +49,7 @@ export interface Permission {
   type: string;
   path: string;
   method: string | null;
-  parent_id: number;
+  parent_id: number | null;
   sort_order: number;
   icon?: string | null;
   created_at: string;
@@ -63,7 +63,7 @@ export interface CreatePermissionRequest {
   type: string;
   path: string;
   method?: string | null;
-  parent_id?: number;
+  parent_id?: number | null;
   sort_order?: number;
   icon?: string | null;
 }
@@ -75,7 +75,7 @@ export interface UpdatePermissionRequest {
   type?: string;
   path?: string;
   method?: string | null;
-  parent_id?: number;
+  parent_id?: number | null;
   sort_order?: number;
   icon?: string | null;
 }

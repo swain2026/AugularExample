@@ -166,7 +166,7 @@ export class RoleFormComponent implements OnInit {
     const perms = this.allPermissions();
     const ancestors: number[] = [];
     let current = perms.find(p => p.id === permId);
-    while (current && current.parent_id !== 0) {
+    while (current && current.parent_id != null) {
       ancestors.push(current.parent_id);
       current = perms.find(p => p.id === current!.parent_id);
     }
